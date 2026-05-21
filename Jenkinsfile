@@ -19,6 +19,12 @@ pipeline {
                 bat 'mvn -B test'
             }
         }
+        stage('deploy') {
+            steps {
+                echo 'Artifactory upload'
+                bat 'mvn deploy'
+            }
+        }
         stage('Archive') {
             steps {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
