@@ -44,4 +44,14 @@
             </plugin>
         </plugins>
     </build>
+         <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <url>http://54.166.154.246:8081/repository/vagile-maven</url>
+    </repository>
+	<snapshotRepository>
+      <id>nexus</id>
+      <url>http://54.166.154.246:8081/repository/vagile-snapshots</url>
+	</snapshotRepository>
+  </distributionManagement>
 </project>
